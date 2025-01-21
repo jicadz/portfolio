@@ -1,0 +1,30 @@
+.desktop-dock, .title-bg {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    width: fit-content;
+    padding: 1rem;
+    padding-bottom: 1.4rem;
+}
+
+.title-bg {
+    padding: .1rem .5rem;
+    font-weight: 600;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.folder-icon {
+    padding: 0 .8rem;
+}
+
+.folder-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    width: fit-content;
+}
