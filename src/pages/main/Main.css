@@ -28,3 +28,13 @@
     backdrop-filter: blur(10px);
     width: fit-content;
 }
+
+/* frame */
+
+.sidebar {
+    border: 1.5px solid #D9D9D9;
+}
+
+.navbar {
+    border-bottom: 1.5px solid #D9D9D9;
+}

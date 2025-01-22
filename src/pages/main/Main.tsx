@@ -1,5 +1,5 @@
 "use client"
-import React from "react"
+import React, { useState } from "react"
 import { FloatingDock } from "../../../components/ui/floating-dock";
 import Image from "next/image";
 import AppStoreIcon from "../../../public/AppStore.png"
@@ -15,8 +15,19 @@ import SettingsIcon from "../../../public/Settings.png"
 import redFolderIcon from "../../../public/RedFolder.png"
 import blueFolderIcon from "../../../public/BlueFolder.png"
 import yellowFolderIcon from "../../../public/YellowFolder.png"
+import Frame from "./Frame";
 
 const Main = () => {
+
+  const [showFrame, setShowFrame] = useState('hidden');
+
+  const showFrameFunction = () => {
+    setShowFrame('block');
+  }
+
+  const hideFrameFunction = () => {
+    setShowFrame('hidden');
+  }
 
   const navItems = [{
     title: 'App Store',
@@ -63,7 +74,7 @@ const Main = () => {
   return (
     <div className="h-[100vh] flex flex-col items-center py-[.8rem]">
       <div className="self-start flex flex-col gap-[1rem]">
-        <div className="w-fit cursor-pointer folder-icon">
+        <div className="w-fit cursor-pointer folder-icon" onClick={showFrameFunction}>
           <Image src={redFolderIcon} alt="redfolder" className="w-[45px]"/>
           <p className="text-[#fff] text-[.7rem] text-center font-extralight">Home</p>
         </div>
@@ -76,6 +87,7 @@ const Main = () => {
           <p className="text-[#fff] text-[.7rem] text-center font-extralight">Works</p>
         </div>
       </div>
+      <Frame hide={showFrame} toggleFrame={hideFrameFunction}/>
       <FloatingDock items={navItems} mobileClassName="md:hidden" desktopClassName="desktop-dock h-[65px] text-[.9rem] fixed bottom-[15px] flex items-end justify-center gap-[1rem]"/>
     </div>
   )

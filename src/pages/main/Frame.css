@@ -1,0 +1,12 @@
+/* sidebar buttons */
+
+.sideBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+}
