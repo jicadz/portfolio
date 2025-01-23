@@ -20,9 +20,18 @@ import Frame from "./Frame";
 const Main = () => {
 
   const [showFrame, setShowFrame] = useState('hidden');
+  const [pageName, setPageName] = useState('');
 
-  const showFrameFunction = () => {
+  const showFrameFunction = (id: number) => {
     setShowFrame('block');
+
+    if(id === 0) {
+      setPageName('Home');
+    } else if (id === 1) {
+      setPageName('About');
+    } else if (id === 2) {
+      setPageName('Works');
+    }
   }
 
   const hideFrameFunction = () => {
@@ -74,20 +83,20 @@ const Main = () => {
   return (
     <div className="h-[100vh] flex flex-col items-center py-[.8rem]">
       <div className="self-start flex flex-col gap-[1rem]">
-        <div className="w-fit cursor-pointer folder-icon" onClick={showFrameFunction}>
+        <div className="w-fit cursor-pointer folder-icon" onClick={() => showFrameFunction(0)}>
           <Image src={redFolderIcon} alt="redfolder" className="w-[45px]"/>
           <p className="text-[#fff] text-[.7rem] text-center font-extralight">Home</p>
         </div>
-        <div className="w-fit cursor-pointer folder-icon">
+        <div className="w-fit cursor-pointer folder-icon" onClick={() => showFrameFunction(1)}>
           <Image src={blueFolderIcon} alt="bluefolder" className="w-[45px]"/>
           <p className="text-[#fff] text-[.7rem] text-center font-extralight">About</p>
         </div>
-        <div className="w-fit cursor-pointer folder-icon">
+        <div className="w-fit cursor-pointer folder-icon" onClick={() => showFrameFunction(2)}>
           <Image src={yellowFolderIcon} alt="yellowfolder" className="w-[45px]"/>
           <p className="text-[#fff] text-[.7rem] text-center font-extralight">Works</p>
         </div>
       </div>
-      <Frame hide={showFrame} toggleFrame={hideFrameFunction}/>
+      <Frame hide={showFrame} toggleFrame={hideFrameFunction} page={pageName} />
       <FloatingDock items={navItems} mobileClassName="md:hidden" desktopClassName="desktop-dock h-[65px] text-[.9rem] fixed bottom-[15px] flex items-end justify-center gap-[1rem]"/>
     </div>
   )

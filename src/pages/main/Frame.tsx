@@ -2,13 +2,19 @@ import React, { useState } from "react"
 import { HiMiniXMark } from "react-icons/hi2";
 import { VscChromeMinimize } from "react-icons/vsc";
 import { RiExpandLeftRightFill } from "react-icons/ri";
+import { SlArrowLeft } from "react-icons/sl";
+import { SlArrowRight } from "react-icons/sl";
+import { FaRegUserCircle } from "react-icons/fa";
 
 interface Props {
   hide?: string;
   toggleFrame?: React.MouseEventHandler<HTMLDivElement>;
+  page? :string;
 }
 
-const Frame: React.FC<Props> = ({ hide, toggleFrame }) => {
+// a functional component
+// accepts props or returns Javascript XML to describe a UI
+const Frame: React.FC<Props> = ({ hide, toggleFrame, page }) => {
 
     const SideBar = () => {
 
@@ -40,8 +46,20 @@ const Frame: React.FC<Props> = ({ hide, toggleFrame }) => {
     const NavBar = () => {
 
         return(
-            <div className="navbar bg-[#fff] w-[80%] h-[8%]">
-
+            <div className="navbar bg-[#fff] w-[80%] h-[8%] flex items-center justify-between px-[.5rem] text-[.7rem] text-[#999090] font-medium">
+              <div className="flex items-center gap-[.5rem]">
+                <SlArrowLeft className="text-[#5D5D5D] cursor-pointer" />
+                <SlArrowRight className="text-[#5D5D5D] cursor-pointer" />
+                <p>{page}</p>
+              </div>
+              <div className="flex">
+                <div className="links flex items-center gap-[.5rem] text-[#5A56D1]">
+                  <FaRegUserCircle className="text-[.9rem]" /> <p>Joshua Ian Cadiz</p>
+                </div>
+                <div className="links"><p className="cursor-pointer">Facebook</p></div>
+                <div className="links"><p className="cursor-pointer">LinkedIn</p></div>
+                <div className="links"><p className="cursor-pointer">Github</p></div>
+              </div>
             </div>
         );
     }

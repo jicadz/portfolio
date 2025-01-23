@@ -10,3 +10,13 @@
     border-radius: 50%;
     cursor: pointer;
 }
+
+/* social links */
+
+.links {
+    padding: 0 .8rem;
+}
+
+.links:nth-child(n+2) {
+    border-left: 2px solid #E6E6E6;
+}
