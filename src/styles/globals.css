@@ -6,3 +6,21 @@
   background-image: url(../../public/bg.png);
   background-size: cover;
 }
+
+/* drop-down component */
+
+.shrinkbox {
+  height: 25px;
+  overflow: hidden;
+  transition: all .2s ease;
+}
+
+.expandbox {
+  height: 50px;
+  transition: all .2s ease;
+}
+
+.arrowtransition {
+  transition: all .2s ease;
+}
+
