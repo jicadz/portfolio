@@ -16,8 +16,8 @@ import redFolderIcon from "../../../public/RedFolder.png"
 import blueFolderIcon from "../../../public/BlueFolder.png"
 import yellowFolderIcon from "../../../public/YellowFolder.png"
 import Frame from "./Frame";
-import { useLabel } from "./states/PageLabel";
-import { useContent } from "./states/PageContent";
+import { useLabel } from "../../../lib/states/PageLabel";
+import { useContent } from "../../../lib/states/PageContent";
 import Home from "./content/Home";
 import About from "./content/About";
 import Works from "./content/Works";

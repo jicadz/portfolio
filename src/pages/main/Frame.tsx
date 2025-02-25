@@ -17,8 +17,8 @@ import png from "../../../public/Image.png";
 import document from "../../../public/Document.png";
 import pdf from "../../../public/PDF.png";
 import downloadcv from "../../../public/Downloads Folder.png"
-import { useLabel } from "./states/PageLabel";
-import { useContent } from "./states/PageContent";
+import { useLabel } from "../../../lib/states/PageLabel";
+import { useContent } from "../../../lib/states/PageContent";
 
 interface Props {
   hide?: string;

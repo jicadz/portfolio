@@ -1,9 +1,9 @@
 import React, { useEffect } from "react"
 import { SlArrowRight } from "react-icons/sl";
 import Image, { StaticImageData } from "next/image";
-import { useLabel } from "../states/PageLabel";
-import { useContent } from "../states/PageContent";
-import { useDropdownState } from "../states/DropDownState";
+import { useLabel } from "../../../../lib/states/PageLabel";
+import { useContent } from "../../../../lib/states/PageContent";
+import { useDropdownState } from "../../../../lib/states/DropDownState";
 import Home from "../content/Home";
 import About from "../content/About";
 import Works from "../content/Works";
