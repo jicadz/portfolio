@@ -17,16 +17,20 @@ import png from "../../../public/Image.png";
 import document from "../../../public/Document.png";
 import pdf from "../../../public/PDF.png";
 import downloadcv from "../../../public/Downloads Folder.png"
+import { useLabel } from "./states/PageLabel";
+import { useContent } from "./states/PageContent";
 
 interface Props {
   hide?: string;
   toggleFrame?: React.MouseEventHandler<HTMLDivElement>;
-  page? :string;
 }
 
 // a functional component
 // accepts props or returns Javascript XML to describe a UI
-const Frame: React.FC<Props> = ({ hide, toggleFrame, page }) => {
+const Frame: React.FC<Props> = ({ hide, toggleFrame }) => {
+
+    const { pageLabel, setPageLabel } = useLabel();
+    const { pageContent, setPageContent } = useContent();
 
     const SideBar = () => {
 
@@ -52,9 +56,9 @@ const Frame: React.FC<Props> = ({ hide, toggleFrame, page }) => {
               <div>
                 <p className="text-[.7rem] text-[#999090] font-medium mt-[1rem] mb-[.5rem]">Desktop</p>
                 <div className="flex flex-col gap-[.5rem]">
-                  <DropDown mainIcon={redFolderIcon} pageName="Home" subIcon={png} subPage="intro.png"/>
-                  <DropDown mainIcon={blueFolderIcon} pageName="About" subIcon={document} subPage="bio.txt"/>
-                  <DropDown mainIcon={yellowFolderIcon} pageName="Works" subIcon={pdf} subPage="works.pdf"/>
+                  <DropDown mainIcon={redFolderIcon} id={0} pageName="Home" subIcon={png} subPage="intro.png"/>
+                  <DropDown mainIcon={blueFolderIcon} id={1} pageName="About" subIcon={document} subPage="bio.txt"/>
+                  <DropDown mainIcon={yellowFolderIcon} id={2} pageName="Works" subIcon={pdf} subPage="works.pdf"/>
                 </div>
               </div>
               {/* download cv */}
@@ -86,11 +90,11 @@ const Frame: React.FC<Props> = ({ hide, toggleFrame, page }) => {
     const NavBar = () => {
 
         return(
-            <div className="navbar bg-[#fff] w-[80%] h-[8%] flex items-center justify-between px-[.5rem] text-[.7rem] text-[#999090] font-medium">
+            <div className="navbar bg-[#fff] w-[100%] h-[8%] flex items-center justify-between px-[.5rem] text-[.7rem] text-[#999090] font-medium">
               <div className="flex items-center gap-[.5rem]">
                 <SlArrowLeft className="text-[#5D5D5D] cursor-pointer" />
                 <SlArrowRight className="text-[#5D5D5D] cursor-pointer" />
-                <p>{page}</p>
+                <p>{pageLabel}</p>
               </div>
               <div className="flex">
                 <div className="links flex items-center gap-[.5rem] text-[#5A56D1]">
@@ -107,7 +111,10 @@ const Frame: React.FC<Props> = ({ hide, toggleFrame, page }) => {
   return (
     <div className={`${hide} bg-[#fff] h-[75%] w-[67%] absolute top-[8%] rounded-[10px] overflow-hidden flex`}>
       <SideBar />
+      <div className="w-[100%]">
       <NavBar />
+      {pageContent}
+      </div>
     </div>
   )
 };

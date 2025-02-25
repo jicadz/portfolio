@@ -16,21 +16,32 @@ import redFolderIcon from "../../../public/RedFolder.png"
 import blueFolderIcon from "../../../public/BlueFolder.png"
 import yellowFolderIcon from "../../../public/YellowFolder.png"
 import Frame from "./Frame";
+import { useLabel } from "./states/PageLabel";
+import { useContent } from "./states/PageContent";
+import Home from "./content/Home";
+import About from "./content/About";
+import Works from "./content/Works";
 
 const Main = () => {
 
   const [showFrame, setShowFrame] = useState('hidden');
-  const [pageName, setPageName] = useState('');
-
+  const { pageLabel, setPageLabel } = useLabel();
+  const { pageContent, setPageContent } = useContent();
   const showFrameFunction = (id: number) => {
     setShowFrame('block');
 
-    if(id === 0) {
-      setPageName('Home');
-    } else if (id === 1) {
-      setPageName('About');
-    } else if (id === 2) {
-      setPageName('Works');
+    const pages = [
+      { id: 0, label: "Home", component: <Home /> },
+      { id: 1, label: "About", component: <About /> },
+      { id: 2, label: "Works", component: <Works /> },
+    ];
+    
+    for (let i = 0; i < pages.length; i++) {
+      if (id === pages[i].id) {
+        setPageLabel(pages[i].label);
+        setPageContent(pages[i].component);
+        break;
+      }
     }
   }
 
@@ -96,7 +107,7 @@ const Main = () => {
           <p className="text-[#fff] text-[.7rem] text-center font-extralight">Works</p>
         </div>
       </div>
-      <Frame hide={showFrame} toggleFrame={hideFrameFunction} page={pageName} />
+      <Frame hide={showFrame} toggleFrame={hideFrameFunction} />
       <FloatingDock items={navItems} mobileClassName="md:hidden" desktopClassName="desktop-dock h-[65px] text-[.9rem] fixed bottom-[15px] flex items-end justify-center gap-[1rem]"/>
     </div>
   )
