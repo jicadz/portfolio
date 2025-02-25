@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useEffect } from "react"
 import { SlArrowRight } from "react-icons/sl";
 import Image, { StaticImageData } from "next/image";
 import { useLabel } from "../states/PageLabel";
@@ -22,8 +22,8 @@ const DropDown: React.FC<Props> = ({ mainIcon, pageName, subIcon, subPage, id })
   const appendclass = dropdownStates[id] || false;
   // const { appendclass, setAppendClass } = useDropdownState();
   // const [appendclass, setAppendClass] = useState(false);
-  const { pageLabel, setPageLabel } = useLabel();
-  const { pageContent, setPageContent } = useContent();
+  const { setPageLabel } = useLabel();
+  const { setPageContent } = useContent();
 
   const dropDownFunction = (id: number) => { 
     const pages = [

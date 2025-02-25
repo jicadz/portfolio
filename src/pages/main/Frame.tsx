@@ -29,10 +29,10 @@ interface Props {
 // accepts props or returns Javascript XML to describe a UI
 const Frame: React.FC<Props> = ({ hide, toggleFrame }) => {
 
-    const { pageLabel, setPageLabel } = useLabel();
-    const { pageContent, setPageContent } = useContent();
+  const { pageLabel } = useLabel();
+  const { pageContent } = useContent();
 
-    const SideBar = () => {
+  const SideBar = () => {
 
       const [isHovered, setIsHovered] = useState('hidden');
 

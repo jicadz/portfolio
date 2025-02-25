@@ -25,8 +25,8 @@ import Works from "./content/Works";
 const Main = () => {
 
   const [showFrame, setShowFrame] = useState('hidden');
-  const { pageLabel, setPageLabel } = useLabel();
-  const { pageContent, setPageContent } = useContent();
+  const { setPageLabel } = useLabel();
+  const { setPageContent } = useContent();
   const showFrameFunction = (id: number) => {
     setShowFrame('block');
 
