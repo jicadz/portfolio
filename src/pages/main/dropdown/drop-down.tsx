@@ -26,6 +26,12 @@ const DropDown: React.FC<Props> = ({ mainIcon, pageName, subIcon, subPage, id })
   const { setPageContent } = useContent();
 
   const dropDownFunction = (id: number) => { 
+  setTimeout(() => {
+    setAppendClass(id, !appendclass);
+  }, 50);
+  }
+
+  const subDropDownFunction = (id: number) => {
     const pages = [
       { id: 0, label: "Home", component: <Home /> },
       { id: 1, label: "About", component: <About /> },
@@ -38,9 +44,6 @@ const DropDown: React.FC<Props> = ({ mainIcon, pageName, subIcon, subPage, id })
       setPageLabel(page.label);
       setPageContent(page.component);
   }
-  setTimeout(() => {
-    setAppendClass(id, !appendclass);
-  }, 10);
   }
 
   useEffect(() => {
@@ -48,13 +51,13 @@ const DropDown: React.FC<Props> = ({ mainIcon, pageName, subIcon, subPage, id })
   }, [appendclass]);
 
   return (
-    <div className={ appendclass ? "shrinkbox expandbox flex gap-[.5rem] text-[#5D5D5D] cursor-pointer" : "shrinkbox flex gap-[.5rem] text-[#5D5D5D] cursor-pointer"} onClick={() => dropDownFunction(id)}>
-        <SlArrowRight className={ appendclass ? "arrowtransition text-[.8rem] mt-[3%] rotate-90" : "arrowtransition text-[.8rem] mt-[3%]"}/>
-      <div className="flex flex-col gap-[.4rem]">
-        <div className="flex items-center gap-[.5rem]">
+    <div className={ appendclass ? "shrinkbox expandbox flex gap-[.5rem] text-[#484848] cursor-pointer" : "shrinkbox flex gap-[.5rem] text-[#484848] cursor-pointer"}>
+        <SlArrowRight className={ appendclass ? "arrowtransition text-[.8rem] mt-[3%] rotate-90" : "arrowtransition text-[.8rem] mt-[3%]"} onClick={() => dropDownFunction(id)}/>
+      <div className="flex flex-col gap-[.4rem] w-[100%]">
+        <div className="flex items-center gap-[.5rem]" onClick={() => dropDownFunction(id)}>
             <Image src={mainIcon} alt="image" width={20}/> <p className="text-[.7rem] font-medium">{pageName}</p>
         </div>
-        <div className="flex items-center gap-[.5rem]">
+        <div className="content flex items-center gap-[.5rem] py-[.1rem] w-[100%]" onClick={() => subDropDownFunction(id)}>
             <Image src={subIcon} alt="image" width={20}/> <p className="text-[.7rem] font-medium">{subPage}</p>
         </div>
       </div>

@@ -2,7 +2,7 @@ import React from "react"
 
 const About = () => {
   return (
-    <div>
+    <div className="bg-[#fff] w-[100%] h-[100vh]">
       About
     </div>
   )

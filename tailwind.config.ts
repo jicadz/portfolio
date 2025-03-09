@@ -11,7 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-      },
+      }, 
+      fontFamily: {
+        monda: ['Monda', 'sans-serif'],
+        inter: ['Inter', 'sans-serif']
+      }
     },
   },
   plugins: [],

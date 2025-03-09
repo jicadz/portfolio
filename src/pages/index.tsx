@@ -1,11 +1,9 @@
-import Main from "./main/Main";
-import Nav from "./nav/Nav";
+import Desktop from "./screens/Desktop";
 
 export default function Home() {
   return (
-    <div className="bg h-[100vh] w-[100%] overflow-hidden">
-      <Nav />
-      <Main />
+    <div className="bg">
+      <Desktop />
     </div>
   );
 }

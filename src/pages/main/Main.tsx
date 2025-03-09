@@ -28,7 +28,8 @@ const Main = () => {
   const { setPageLabel } = useLabel();
   const { setPageContent } = useContent();
   const showFrameFunction = (id: number) => {
-    setShowFrame('block');
+    setTimeout(() => {
+      setShowFrame('block');
 
     const pages = [
       { id: 0, label: "Home", component: <Home /> },
@@ -43,6 +44,7 @@ const Main = () => {
         break;
       }
     }
+    }, 10)
   }
 
   const hideFrameFunction = () => {

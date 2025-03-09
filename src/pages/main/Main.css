@@ -32,7 +32,8 @@
 /* frame */
 
 .sidebar {
-    border: 1.5px solid #D9D9D9;
+    border-right: 1.5px solid #D9D9D9;
+    background-color: rgba(255, 255, 255, 0.75);
 }
 
 .navbar {

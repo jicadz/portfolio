@@ -97,7 +97,7 @@ const Nav = () => {
       </div>
 
       <div className="text-[.7rem] text-[#fff] flex items-center gap-[1rem]">
-        <div className="flex items-center gap-[.3rem]">
+        <div className="flex items-center gap-[.3rem] cursor-default">
            <p>{batteryLevel}%</p>
            {chargingIcon}
         </div>
@@ -105,9 +105,9 @@ const Nav = () => {
           <MdOutlineWifi className="text-[1rem]"/>
           <IoSearchOutline className="text-[1rem]"/>
         </div>
-        <div className="flex items-center gap-[1rem] text-[13px]">
-        <p>{formattedDate}</p>
-        <p>{formattedTime}</p>
+        <div className="flex items-center gap-[.5rem] text-[13px]">
+        <p className="datetime cursor-pointer">{formattedDate}</p>
+        <p className="datetime cursor-pointer">{formattedTime}</p>
         </div>
       </div>
     </div>

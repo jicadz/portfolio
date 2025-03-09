@@ -1,9 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-* {
-    font-family: "Inter", serif;
-}
-
 .nav {
     background-color: rgba(0, 0, 0, 0.4);
   }
@@ -14,6 +8,16 @@
 }
 
 .nav-list li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: all .2s ease;
+}
+
+.datetime {
+    padding: 0 .2rem;
+    border-radius: 5px;
+}
+
+.datetime:hover {
     background-color: rgba(255, 255, 255, 0.2);
     transition: all .2s ease;
 }

@@ -24,3 +24,60 @@
   transition: all .2s ease;
 }
 
+.content:hover {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+}
+
+@font-face {
+  font-family: 'Monda';
+  src: url('/fonts/Monda/Monda-VariableFont_wght.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* HOME Frame Content */
+
+.name {
+  background: #05093E;
+  background: linear-gradient(to right, #05093E 0%, #ED0F0F 43%, #390FC5 94%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 3px 3px rgba(83, 82, 82, 0.2);
+}
+
+.myPicbg {
+  border-radius: 5px;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,34,255,1) 100%);
+}
+
+.worksappend::before {
+  content: "D:\\Desktop\\";
+  font-size: .8rem;
+}
+
+.worksappend {
+  background-color: #f0efef;
+  padding: 0 .2rem;
+  border-radius: 5px;
+}
+
+.contactsappend::before {
+  content: "@gmail - ";
+  font-size: .8rem;
+}
+
+.contactsappend {
+  background-color: #f0efef;
+  padding: 0 .2rem;
+  border-radius: 5px;
+}
