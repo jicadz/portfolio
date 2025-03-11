@@ -38,16 +38,21 @@ const Home = () => {
             repeat={Infinity}
           />
           </div>
-          <p className="font-monda italic text-[.8rem]" data-aos="fade-right" data-aos-delay="2700" data-aos-duration="500">“I design and develop seamless, user-centric web solutions.”</p>
+          <div className="font-monda w-[fit-content] mt-[.5rem] text-[.8rem] leading-[1.3rem] flex flex-col" data-aos="fade-right" data-aos-delay="2700" data-aos-duration="500">
+                    <p className="relative left-[1.2rem]"><div className='pulse'>
+                        <span style={{ "--i": 0 }  as React.CSSProperties}></span>
+                    </div>Based in Iloilo, Philippines</p>
+                    <p>Available for a full-time position</p>
+          </div>
         </div>
         <div className="flex flex-col gap-[1rem]" data-aos="fade-right" data-aos-delay="2900" data-aos-duration="500">
           <button onMouseEnter={setHoverWorksFunction} onMouseLeave={setHoverWorksFunction} className="flex items-center gap-[.8rem] w-[fit-content]">
-            <SlArrowRight /> 
+            <SlArrowRight className="text-[.8rem]" /> 
             <Image src={yellowFolder} alt="folder" className="w-[20px]"/>
             <p className={ hoverWorks ? "text-[.8rem] font-monda worksappend" : "text-[.8rem] font-monda"}>Works</p>
           </button>
           <button className="flex items-center gap-[.8rem] w-[fit-content]" onMouseEnter={setHoverContactFunction} onMouseLeave={setHoverContactFunction}>
-            <SlArrowRight /> 
+            <SlArrowRight className="text-[.8rem]"/> 
             <IoMail className="text-[#5D5D5D] text-[1.2rem]"/>
             <p className={ hoverContact ? "text-[.8rem] font-monda contactsappend" : "text-[.8rem] font-monda"}>Get In Touch</p>
           </button>
