@@ -7,7 +7,7 @@ import { RiExpandLeftRightFill } from "react-icons/ri";
 import { SlArrowLeft } from "react-icons/sl";
 import { SlArrowRight } from "react-icons/sl";
 import { FaRegUserCircle } from "react-icons/fa";
-import { IoMail } from "react-icons/io5";
+import gmail from "../../../public/Gmail.png"
 import { FaPhoneAlt } from "react-icons/fa";
 
 import redFolderIcon from "../../../public/RedFolder.png";
@@ -16,7 +16,7 @@ import yellowFolderIcon from "../../../public/YellowFolder.png";
 import png from "../../../public/Image.png";
 import document from "../../../public/Document.png";
 import pdf from "../../../public/PDF.png";
-import downloadcv from "../../../public/Downloads Folder.png"
+import downloadcv from "../../../public/Downloads Folder2.png"
 import { useLabel } from "../../../lib/states/PageLabel";
 import { useContent } from "../../../lib/states/PageContent";
 
@@ -54,7 +54,7 @@ const Frame: React.FC<Props> = ({ hide, toggleFrame }) => {
               </div>
               {/* drop-downs */}
               <div>
-                <p className="text-[.7rem] text-[#5D5D5D] font-medium mt-[1rem] mb-[.5rem]">Desktop</p>
+                <p className="text-[.8rem] text-[#5D5D5D] font-medium mt-[1rem] mb-[.5rem]">Desktop</p>
                 <div className="flex flex-col gap-[.5rem]">
                   <DropDown mainIcon={redFolderIcon} id={0} pageName="Home" subIcon={png} subPage="intro.png"/>
                   <DropDown mainIcon={blueFolderIcon} id={1} pageName="About" subIcon={document} subPage="bio.txt"/>
@@ -63,23 +63,23 @@ const Frame: React.FC<Props> = ({ hide, toggleFrame }) => {
               </div>
               {/* download cv */}
               <div>
-                <p className="text-[.7rem] text-[#5D5D5D] font-medium mt-[1rem] mb-[.5rem]">Download CV</p>
+                <p className="text-[.8rem] text-[#5D5D5D] font-medium mt-[1rem] mb-[.5rem]">Download CV</p>
                 <div className="flex items-center gap-[.5rem] cursor-pointer">
                   <Image src={downloadcv} alt="image" width={20} />
-                  <p className="text-[.7rem] font-medium text-[#484848]">my-cv</p>
+                  <p className="text-[.8rem] font-medium text-[#484848]">my-cv</p>
                 </div>
               </div>
               {/* contacts */}
               <div>
-                <p className="text-[.7rem] text-[#5D5D5D] font-medium mt-[1rem] mb-[.5rem]">Contacts</p>
+                <p className="text-[.8rem] text-[#5D5D5D] font-medium mt-[1rem] mb-[.5rem]">Contacts</p>
                 <div className="flex flex-col gap-[.5rem]">
                   <a className="flex items-start gap-[.5rem] cursor-pointer" href="https://mail.google.com/mail/?view=cm&to=cadiz.joshuaiang@gmail.com&subject=Inquiry&body=Hello, I'd like to get in touch!" target="_blank">
-                  <IoMail className="text-[#5D5D5D]"/>
-                  <p className="text-[.7rem] font-medium text-[#484848] break-words w-[80%]">cadiz.joshuaiang@gmail.com</p>
+                  <Image src={gmail} alt="gmail" width={18}/>
+                  <p className="text-[.8rem] font-medium text-[#484848] break-words w-[80%]">cadiz.joshuaiang@gmail.com</p>
                   </a>
                   <div className="flex items-center gap-[.5rem] cursor-default">
                     <FaPhoneAlt className="text-[#5D5D5D] rotate-[20deg] text-[.9rem]"/>
-                    <p className="text-[.7rem] font-medium text-[#484848] text-wrap">+63 908 399 1262</p>
+                    <p className="text-[.8rem] font-medium text-[#484848] text-wrap">+63 908 399 1262</p>
                   </div>
                 </div>
               </div>
@@ -90,7 +90,7 @@ const Frame: React.FC<Props> = ({ hide, toggleFrame }) => {
     const NavBar = () => {
 
         return(
-            <div className="navbar bg-[#fff] w-[100%] h-[8%] flex items-center justify-between px-[.5rem] text-[.7rem] text-[#999090] font-medium">
+            <div className="navbar bg-[#fff] w-[100%] h-[8%] flex items-center justify-between px-[.5rem] text-[.8rem] text-[#999090] font-medium">
               <div className="flex items-center gap-[.5rem] cursor-default">
                 <SlArrowLeft className="text-[#5D5D5D]" />
                 <SlArrowRight className="text-[#5D5D5D]" />
@@ -109,7 +109,7 @@ const Frame: React.FC<Props> = ({ hide, toggleFrame }) => {
     }
 
   return (
-    <div className={`${hide} h-[75%] w-[67%] absolute top-[8%] rounded-[10px] overflow-hidden flex`}>
+    <div className={`${hide} h-[90%] w-[75%] z-[10] absolute top-[8%] rounded-[10px] overflow-hidden flex`}>
       <SideBar />
       <div className="w-[100%]">
       <NavBar />

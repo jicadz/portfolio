@@ -37,8 +37,21 @@
 }
 
 @font-face {
+  font-family: 'MondaBold';
+  src: url('/fonts/Monda/static/Monda-Bold.ttf');
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Inter';
-  src: url('/fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf');
+  src: url('/fonts/Inter/Inter-VariableFont_opsz,wght.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InterThin';
+  src: url('/fonts/Inter/Inter-VariableFont_opsz,wght.ttf');
   font-weight: 400;
   font-style: normal;
 }
@@ -52,6 +65,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 3px 3px 3px rgba(83, 82, 82, 0.2);
+  font-weight: bolder;
 }
 
 .myPicbg {
@@ -81,6 +95,19 @@
   padding: 0 .2rem;
   border-radius: 5px;
 }
+
+.cvappend::before {
+  content: "D:\\Download CV\\";
+  font-size: .8rem;
+}
+
+.cvappend {
+  background-color: #f0efef;
+  padding: 0 .2rem;
+  border-radius: 5px;
+}
+
+/* about navbuttons */
 
 .pulse {
   position: absolute;
@@ -117,4 +144,36 @@
     transform: scale(3);
   }
   
+}
+
+
+/* SKILLS */
+
+.skill-frame::-webkit-scrollbar {
+  width: 6px; 
+  height: 6px;
+  background-color: transparent;
+}
+
+.skill-frame::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 10px; 
+}
+
+.skill-frame::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.skill-level {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(2px);
+  border: 1px solid #dcdada;
+  border-radius: 10px;
+  transform: scale(0);
+  transition: all .2s ease-in-out;
+  z-index: 10;
+}
+
+.append-skill-level {
+  transform: scale(1);
 }

@@ -55,10 +55,10 @@ const DropDown: React.FC<Props> = ({ mainIcon, pageName, subIcon, subPage, id })
         <SlArrowRight className={ appendclass ? "arrowtransition text-[.8rem] mt-[3%] rotate-90" : "arrowtransition text-[.8rem] mt-[3%]"} onClick={() => dropDownFunction(id)}/>
       <div className="flex flex-col gap-[.4rem] w-[100%]">
         <div className="flex items-center gap-[.5rem]" onClick={() => dropDownFunction(id)}>
-            <Image src={mainIcon} alt="image" width={20}/> <p className="text-[.7rem] font-medium">{pageName}</p>
+            <Image src={mainIcon} alt="image" width={20}/> <p className="text-[.8rem] font-medium">{pageName}</p>
         </div>
         <div className="content flex items-center gap-[.5rem] py-[.1rem] w-[100%]" onClick={() => subDropDownFunction(id)}>
-            <Image src={subIcon} alt="image" width={20}/> <p className="text-[.7rem] font-medium">{subPage}</p>
+            <Image src={subIcon} alt="image" width={20}/> <p className="text-[.8rem] font-medium">{subPage}</p>
         </div>
       </div>
     </div>

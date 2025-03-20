@@ -110,7 +110,7 @@ const Main = () => {
         </div>
       </div>
       <Frame hide={showFrame} toggleFrame={hideFrameFunction} />
-      <FloatingDock items={navItems} mobileClassName="md:hidden" desktopClassName="desktop-dock h-[65px] text-[.9rem] fixed bottom-[15px] flex items-end justify-center gap-[1rem]"/>
+      <FloatingDock items={navItems} mobileClassName="md:hidden" desktopClassName="desktop-dock h-[65px] text-[.9rem] fixed bottom-[15px] flex items-end justify-center gap-[1rem] z-[1]"/>
     </div>
   )
 };
