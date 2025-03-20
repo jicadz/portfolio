@@ -6,7 +6,6 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 import { SlArrowRight } from "react-icons/sl";
-import { IoMail } from "react-icons/io5";
 import yellowFolder from "../../../../public/YellowFolder.png"
 import { TypeAnimation } from 'react-type-animation';
 
