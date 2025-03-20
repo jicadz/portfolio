@@ -11,7 +11,9 @@ import { TypeAnimation } from 'react-type-animation';
 
 const Home = () => {
   useEffect(() => {
-    Aos.init();
+    setTimeout(() => {
+      Aos.init();
+    }, 10);
   })
 
   const [hoverWorks, setHoverWorks] = useState(false);

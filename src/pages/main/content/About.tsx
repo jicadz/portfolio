@@ -12,6 +12,12 @@ import "aos/dist/aos.css";
 
 const About = () => {
 
+  useEffect(() => {
+      setTimeout(() => {
+        Aos.init();
+      }, 10);
+    })
+
   interface ButtonName {
     id: number;
     clicked: boolean;
@@ -32,10 +38,6 @@ const About = () => {
   }
 
   const Aboutme = () => {
-
-  useEffect(() => {
-      Aos.init();
-    })
 
   const [hoverCV, setHoverCV] = useState(false);
 

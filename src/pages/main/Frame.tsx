@@ -106,7 +106,7 @@ const Frame: React.FC<Props> = ({ hide, toggleFrame }) => {
               </div>
             </div>
         );
-    }
+      }
 
   return (
     <div className={`${hide} h-[90%] w-[75%] z-[10] absolute top-[8%] rounded-[10px] overflow-hidden flex`}>
