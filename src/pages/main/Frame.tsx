@@ -109,7 +109,7 @@ const Frame: React.FC<Props> = ({ hide, toggleFrame }) => {
       }
 
   return (
-    <div className={`${hide} h-[90%] w-[75%] z-[10] absolute top-[8%] rounded-[10px] overflow-hidden flex`}>
+    <div className={`${hide} h-[89%] w-[80%] z-[10] absolute top-[8%] rounded-[10px] overflow-hidden flex`}>
       <SideBar />
       <div className="w-[100%]">
       <NavBar />

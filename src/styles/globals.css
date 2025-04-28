@@ -74,37 +74,55 @@
   background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,34,255,1) 100%);
 }
 
-.worksappend::before {
-  content: "D:\\Desktop\\";
-  font-size: .8rem;
+/* home buttons */
+
+.works-text {
+  transition: all .5s ease-in-out;
+  transform: translateX(-72px);
 }
 
 .worksappend {
   background-color: #f0efef;
   padding: 0 .2rem;
   border-radius: 5px;
+  width: fit-content;
+  text-align: left;
+  transform: translateX(0px);
+  transition: all .5s ease-in-out;
 }
 
-.contactsappend::before {
-  content: "@gmail - ";
-  font-size: .8rem;
+.contact-text {
+  transition: all .5s ease-in-out;
+  transform: translateX(-58px);
 }
 
 .contactsappend {
   background-color: #f0efef;
   padding: 0 .2rem;
   border-radius: 5px;
+  width: fit-content;
+  text-align: left;
+  transform: translateX(0px);
+  transition: all .5s ease-in-out;
 }
 
-.cvappend::before {
-  content: "D:\\Download CV\\";
-  font-size: .8rem;
+
+
+/* ABOUT frame content */
+
+.cv-text {
+  transition: all .5s ease-in-out;
+  transform: translateX(-106px);
 }
 
 .cvappend {
   background-color: #f0efef;
   padding: 0 .2rem;
   border-radius: 5px;
+  width: fit-content;
+  text-align: left;
+  transform: translateX(0px);
+  transition: all .5s ease-in-out;
 }
 
 /* about navbuttons */
@@ -156,7 +174,7 @@
 }
 
 .skill-frame::-webkit-scrollbar-thumb {
-  background-color: transparent;
+  background-color: #616161;
   border-radius: 10px; 
 }
 
@@ -176,4 +194,31 @@
 
 .append-skill-level {
   transform: scale(1);
+}
+
+
+/* screens */
+
+@media (min-width: 1024px) {
+  .desktop {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1023px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .bg {
+    background: #1c1c1c;
+  }
 }

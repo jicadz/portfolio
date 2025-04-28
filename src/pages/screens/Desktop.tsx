@@ -3,7 +3,7 @@ import Nav from "../nav/Nav";
 
 const Desktop = () => {
   return (
-    <div className="h-[100vh] w-[100%] overflow-hidden">
+    <div className="desktop h-[100vh] w-[100%] overflow-hidden">
       <Nav />
       <Main />
     </div>

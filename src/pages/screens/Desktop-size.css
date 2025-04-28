@@ -1,0 +1,67 @@
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+    /* Home */
+    .home h1 {
+        font-size: 2.8rem;
+    }
+
+    .home h2 {
+        font-size: 1.5rem;
+    }
+
+    .home .typing-ani {
+        font-size: 1.4rem;
+    }
+
+    /* About */
+    .about .heading {
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+
+    .about .body {
+        font-size: .8rem;
+    }
+
+    .about .about-btn {
+        margin-top: 0;
+    }
+
+}
+
+@media (min-width: 1440px) {
+
+    /* Home */
+    .myPic-container {
+        width: 420px;
+    }
+
+    .home h1 {
+        font-size: 4.5rem;
+        line-height: 4rem;
+    }
+
+    .home h2 {
+        font-size: 2rem;
+    }
+
+    .home .typing-ani {
+        font-size: 2.4rem;
+    }
+
+    /* About */
+    .about .heading {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .about .body {
+        font-size: 1rem;
+    }
+
+    .about .about-btn {
+        margin-top: 0;
+    }
+
+}
+

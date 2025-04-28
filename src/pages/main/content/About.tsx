@@ -39,23 +39,30 @@ const About = () => {
 
   const Aboutme = () => {
 
-  const [hoverCV, setHoverCV] = useState(false);
+    const inHoverCV = (id : string) => {
+      const element = document.querySelector(`${id}`) as HTMLElement;
+      element?.querySelector('.cv-text')?.classList.add('cvappend');
+    }
+  
+    const outHoverCV = (id : string) => {
+      const element = document.querySelector(`${id}`) as HTMLElement;
+      element?.querySelector('.cv-text')?.classList.remove('cvappend');
+    }
 
-  const setHoverCVFunction = () => {
-    setHoverCV(!hoverCV);
-  }
     return(
-      <div className="w-[100%] h-[70%] px-[2rem] flex gap-[1.2rem]">
-        <div className="w-[335px] h-[stretch] flex items-center justify-center" data-aos="zoom-in" data-aos-duration="1000">
-          <Image src={mypic} alt="mypic" />
+      <div className="about w-[100%] h-[70%] px-[2rem] flex items-center gap-[1.2rem]">
+        <div className="h-[stretch] flex items-center justify-center" data-aos="zoom-in" data-aos-duration="1000">
+          <Image src={mypic} alt="mypic" width={300}/>
         </div>
-        <div className="w-[60%] flex flex-col gap-[1rem]">
-          <p className="text-[2.5rem] leading-[2.5rem] font-interthin" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">I <b>design</b> and <b>develop</b> seamless, user-centric <b>web solutions</b></p>
-          <p className="font-interthin text-[14px]" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1250">My creative journey began 3 years ago with a passion for design and development. I honed my UI/UX and web development skills through online learning and personal projects. This passion for building innovative solutions deepened my expertise and enabled me to apply my skills professionally, creating impactful solutions for my clients.</p>
-          <button data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1500" onMouseEnter={setHoverCVFunction} onMouseLeave={setHoverCVFunction} className="flex items-center gap-[.8rem] w-[fit-content] mt-[1rem]">
+        <div className="about-content w-[60%] flex flex-col gap-[1rem]">
+          <p className="heading text-[2.5rem] leading-[2.5rem] font-interthin" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">I <b>design</b> and <b>develop</b> seamless, user-centric <b>web solutions</b></p>
+          <p className="body font-interthin text-[14px]" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1250">My creative journey began 3 years ago with a passion for design and development. I honed my UI/UX and web development skills through online learning and personal projects. This passion for building innovative solutions deepened my expertise and enabled me to apply my skills professionally, creating impactful solutions for my clients.</p>
+          <button id="cv-button" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1500" onMouseEnter={() => inHoverCV('#cv-button')} onMouseLeave={() => outHoverCV('#cv-button')} className="about-btn flex items-center gap-[.8rem] w-[fit-content] mt-[1rem]">
             <SlArrowRight className="text-[.8rem]"/> 
             <Image src={downloadcv} width={25} alt="cv"/>
-            <p className={hoverCV ? 'cvappend text-[.8rem] font-inter' : 'text-[.8rem] font-inter'}>my-cv</p>
+            <div className="overflow-hidden w-[fit-content]">
+              <p className="cv-text text-[.8rem] font-inter">D:\Download CV\my-cv</p>
+            </div>
         </button>
         </div>
     </div>
@@ -114,10 +121,13 @@ const About = () => {
       <div className="w-[100%] h-[70%] px-[2rem] flex gap-[1.2rem]">
         <div className="border-[1px] border-[solid] border-[black] h-[100%] w-[100%] rounded-[10px]">
           <div className="flex items-center justify-between gap-[.5rem] bg-[#E6E6E6] w-[100%] h-[2rem] px-[.5rem] border-b-[1px] border-b-[solid] border-b-[black] rounded-t-[10px]">
-            <div className="flex items-center gap-[.5rem]">
-              <div className="bg-[#F52C2C] w-[12px] h-[12px] rounded-[50%]"></div>
-              <div className="bg-[#FBB80E] w-[12px] h-[12px] rounded-[50%]"></div>
-              <div className="bg-[#09BF1E] w-[12px] h-[12px] rounded-[50%]"></div>
+            <div className="flex items-center gap-[.5rem] text-[.8rem]">
+              <p>Learning</p>
+              <div className="bg-[#09BF1E] w-[12px] h-[12px] rounded-[50%] mr-[1rem]"></div>
+              <p>Proficient</p>
+              <div className="bg-[#FBB80E] w-[12px] h-[12px] rounded-[50%] mr-[1rem]"></div>
+              <p>Expert</p>
+              <div className="bg-[#2c83fd] w-[12px] h-[12px] rounded-[50%] mr-[1rem]"></div>
             </div>
             <p className="text-[#999797] text-[.8rem] cursor-default">my_skills.png</p>
           </div>
@@ -247,7 +257,7 @@ const About = () => {
   }
 
   return (
-    <div className="bg-[#fff] w-[100%] h-[92%] flex flex-col items-center justify-evenly overflow-hidden">
+    <div className="bg-[#fff] w-[100%] h-[92%] flex flex-col items-center justify-evenly overflow-hidden pb-[5%]">
       {content}
       <div className="w-[400px] flex items-center justify-around">
         <NavItems id={0} clicked={activeId == 0} buttonName="About Me" onclick={handleClick}/>
