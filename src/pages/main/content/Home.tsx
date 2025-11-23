@@ -14,7 +14,7 @@ const Home = () => {
     setTimeout(() => {
       Aos.init();
     }, 10);
-  })
+  }, [])
 
   const inHoverWorks = (id : string) => {
     const element = document.querySelector(`${id}`) as HTMLElement;
