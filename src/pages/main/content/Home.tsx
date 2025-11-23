@@ -68,7 +68,7 @@ const Home = () => {
             <SlArrowRight className="text-[.8rem]"/> 
             <Image src={gmail} alt="gmail" width={20}/>
             <div className="overflow-hidden w-[fit-content]">
-              <p className="contact-text text-[.8rem] font-inter">@gmail - Get In Touch</p>
+              <a href="https://mail.google.com/mail/?view=cm&to=cadiz.joshuaiang@gmail.com&subject=Inquiry&body=Hello, I'd like to get in touch!" target="_blank"><p className="contact-text text-[.8rem] font-inter">@gmail - Get In Touch</p></a>
             </div>
           </button>
         </div>

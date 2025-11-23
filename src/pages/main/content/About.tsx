@@ -232,7 +232,7 @@ const About = () => {
               <p className="font-interthin text-[.8rem]">Date Issued: June 2024</p>
             </div>
             <button className="flex items-center gap-[.5rem] px-[.5rem] py-[.2rem] border-[1px] border-[solid] border-[black] rounded-[20px] w-[fit-content]">
-                <p className="text-[.8rem] font-interthin">Show credential</p>
+                <a href="https://www.coursera.org/account/accomplishments/verify/UHPJW3W38R32"><p className="text-[.8rem] font-interthin">Show credential</p></a>
                 <Image src={protect} alt="protect" width={20}/>
             </button>
             </div>

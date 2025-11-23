@@ -21,18 +21,18 @@ useEffect(() => {
             <p className="font-interthin text-[.8rem]">D:\Desktop\Works</p>
           </div>
           <div className="border-t-[1px] border-[solid] mt-[1rem]" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
-          <div className="border-b-[1px] h-[4.5rem] flex items-center gap-[1rem]">
-            <div className="flex items-center h-[100%] w-[100%]">
+          <div className="flex h-[100%] flex-col items-center gap-[1rem] mt-[1rem]">
+            <div className="border-b-[1px] flex items-center h-[100%] w-[100%] pb-[1rem]">
               <div className="rounded-md overflow-hidden">
                 <Image src={woosh} alt="" width={80}/>
               </div>
               <div className="flex flex-col pl-[1rem]">
-                <a href="https://woosh-resto-bar-git-main-joshua-cadizs-projects.vercel.app/">Woosh Resto Bar Website</a>
-                <p className="text-[12px] text-[#5d5c5c]">A responsive frontend website for a resto bar built with React</p>
+                <a href="https://woosh-resto-bar-git-main-joshua-cadizs-projects.vercel.app/" className="text-[#2f5dc0]">Woosh Resto Bar Website</a>
+                <p className="text-[12px] text-[#5d5c5c]">A fully responsive resto bar website built with React, featuring table booking, menu browsing, and smooth design.</p>
               </div>
             </div>
             <div className="flex items-center h-[100%] w-[100%]">
-              
+              <p>More comming soon...</p>
             </div>
           </div>
         </div>
