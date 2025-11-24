@@ -66,7 +66,7 @@ const Frame: React.FC<Props> = ({ hide, toggleFrame }) => {
                 <p className="text-[.8rem] text-[#5D5D5D] font-medium mt-[1rem] mb-[.5rem]">Download CV</p>
                 <div className="flex items-center gap-[.5rem] cursor-pointer">
                   <Image src={downloadcv} alt="image" width={20} />
-                  <p className="text-[.8rem] font-medium text-[#484848]">my-cv</p>
+                  <a href="/cv.pdf"><p className="text-[.8rem] font-medium text-[#484848]">my-cv</p></a>
                 </div>
               </div>
               {/* contacts */}
@@ -100,9 +100,9 @@ const Frame: React.FC<Props> = ({ hide, toggleFrame }) => {
                 <div className="links flex items-center gap-[.5rem] text-[#5A56D1] cursor-default">
                   <FaRegUserCircle className="text-[.9rem]" /> <p>Joshua Ian Cadiz</p>
                 </div>
-                <div className="links"><p className="cursor-pointer">Facebook</p></div>
-                <div className="links"><p className="cursor-pointer">LinkedIn</p></div>
-                <div className="links"><p className="cursor-pointer">Github</p></div>
+                <div className="links"><a href="https://www.facebook.com/joshua.ian.cadiz/"><p className="cursor-pointer">Facebook</p></a></div>
+                <div className="links"><a href="https://www.linkedin.com/in/joshua-ian-cadiz/"><p className="cursor-pointer">LinkedIn</p></a></div>
+                <div className="links"><a href="https://github.com/joshiancadiz"><p className="cursor-pointer">Github</p></a></div>
               </div>
             </div>
         );

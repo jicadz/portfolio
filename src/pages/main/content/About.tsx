@@ -61,7 +61,7 @@ const About = () => {
             <SlArrowRight className="text-[.8rem]"/> 
             <Image src={downloadcv} width={25} alt="cv"/>
             <div className="overflow-hidden w-[fit-content]">
-              <p className="cv-text text-[.8rem] font-inter">D:\Download CV\my-cv</p>
+              <a href="/cv.pdf"><p className="cv-text text-[.8rem] font-inter">D:\Download CV\my-cv</p></a>
             </div>
         </button>
         </div>
@@ -176,31 +176,6 @@ const About = () => {
               <Skill type={2} skill="Java"/>
               <StackIcon name="java" className="w-[50px]" />
               <p>Java</p>
-            </div>
-            <div data-aos="zoom-in" data-aos-duration="500" data-aos-delay="900" className="font-inter text-[.8rem] flex flex-col items-center gap-[.5rem] relative cursor-pointer" id="fb" onMouseEnter={() => inHover('#fb')} onMouseLeave={() => outHover('#fb')}>
-              <Skill type={1} skill="Firebase"/>
-              <StackIcon name="firebase" className="w-[50px]" />
-              <p>Firebase</p>
-            </div>
-            <div data-aos="zoom-in" data-aos-duration="500" data-aos-delay="900" className="font-inter text-[.8rem] flex flex-col items-center gap-[.5rem] relative cursor-pointer" id="php" onMouseEnter={() => inHover('#php')} onMouseLeave={() => outHover('#php')}>
-              <Skill type={1} skill="PHP"/>
-              <StackIcon name="php" className="w-[50px]" />
-              <p>PHP</p>
-            </div>
-            <div data-aos="zoom-in" data-aos-duration="500" data-aos-delay="900" className="font-inter text-[.8rem] flex flex-col items-center gap-[.5rem] relative cursor-pointer" id="lvl" onMouseEnter={() => inHover('#lvl')} onMouseLeave={() => outHover('#lvl')}>
-              <Skill type={1} skill="Laravel"/>
-              <StackIcon name="laravel" className="w-[50px]" />
-              <p>Laravel</p>
-            </div>
-            <div data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1000" className="font-inter text-[.8rem] flex flex-col items-center gap-[.5rem] relative cursor-pointer" id="sql" onMouseEnter={() => inHover('#sql')} onMouseLeave={() => outHover('#sql')}>
-              <Skill type={2} skill="MySQL"/>
-              <StackIcon name="mysql" className="w-[50px]" />
-              <p>MySQL</p>
-            </div>
-            <div data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1100" className="font-inter text-[.8rem] flex flex-col items-center gap-[.5rem] relative cursor-pointer" id="ap" onMouseEnter={() => inHover('#ap')} onMouseLeave={() => outHover('#ap')}>
-              <Skill type={1} skill="Adobe Photoshop"/>
-              <StackIcon name="ps" className="w-[50px]"/>
-              <p className="text-center">Adobe Photoshop</p>
             </div>
             <div data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1200" className="font-inter text-[.8rem] flex flex-col items-center gap-[.5rem] relative cursor-pointer" id="figma" onMouseEnter={() => inHover('#figma')} onMouseLeave={() => outHover('#figma')}>
               <Skill type={2} skill="Figma"/>

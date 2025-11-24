@@ -1,15 +1,29 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import Image from "next/image";
 import myPic from "../../../../public/myPic2.png"
 import gmail from "../../../../public/Gmail.png"
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useLabel } from "../../../../lib/states/PageLabel";
+import { useContent } from "../../../../lib/states/PageContent";
+import Works from "./Works";
 
 import { SlArrowRight } from "react-icons/sl";
 import yellowFolder from "../../../../public/YellowFolder.png"
 import { TypeAnimation } from 'react-type-animation';
 
 const Home = () => {
+
+  const { setPageLabel } = useLabel();
+  const { setPageContent } = useContent();
+
+  const showFrameFunction = () => {
+    setTimeout(() => {
+      setPageLabel("Works")
+      setPageContent(<Works/>)
+    }, 10)
+  }
+
   useEffect(() => {
     setTimeout(() => {
       Aos.init();
@@ -60,7 +74,7 @@ const Home = () => {
           <button id="works-button" onMouseEnter={() => inHoverWorks('#works-button')} onMouseLeave={() => outHoverWorks('#works-button')} className="flex items-center gap-[.8rem] w-[fit-content]">
             <SlArrowRight className="text-[.8rem]" /> 
             <Image src={yellowFolder} alt="folder" className="w-[20px]"/>
-            <div className="overflow-hidden w-[fit-content]">
+            <div className="overflow-hidden w-[fit-content]" onClick={showFrameFunction}>
               <p className="works-text text-[.8rem] font-inter">D:\Desktop\Works</p>
             </div>
           </button>
