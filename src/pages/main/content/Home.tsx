@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 import Image from "next/image";
 import myPic from "../../../../public/myPic2.png"
 import gmail from "../../../../public/Gmail.png"
