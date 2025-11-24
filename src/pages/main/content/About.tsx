@@ -56,7 +56,7 @@ const About = () => {
         </div>
         <div className="about-content w-[60%] flex flex-col gap-[1rem]">
           <p className="heading text-[2.5rem] leading-[2.5rem] font-interthin" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1000">I <b>design</b> and <b>develop</b> seamless, user-centric <b>web solutions</b></p>
-          <p className="body font-interthin text-[14px]" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1250">My creative journey began 3 years ago with a passion for design and development. I honed my UI/UX and web development skills through online learning and personal projects. This passion for building innovative solutions deepened my expertise and enabled me to apply my skills professionally, creating impactful solutions for my clients.</p>
+          <p className="body font-interthin text-[14px]" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1250">My creative journey began 3 years ago with a passion for design and development. I honed my UX and web development skills through online learning and personal projects. This passion for building innovative solutions deepened my expertise and enabled me to apply my skills professionally, creating impactful solutions for my clients.</p>
           <button id="cv-button" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1500" onMouseEnter={() => inHoverCV('#cv-button')} onMouseLeave={() => outHoverCV('#cv-button')} className="about-btn flex items-center gap-[.8rem] w-[fit-content] mt-[1rem]">
             <SlArrowRight className="text-[.8rem]"/> 
             <Image src={downloadcv} width={25} alt="cv"/>
